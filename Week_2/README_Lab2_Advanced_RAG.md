@@ -4,7 +4,7 @@
 > **Lab:** Advanced RAG Systems Engineering  
 > **Student Name:**  Quynh (Tina) Nguyen  
 > **GitHub Username:**  tinana2k  
-> **Date:**  01/29/2025
+> **Date:**  01/29/2026
 
 ---
 
