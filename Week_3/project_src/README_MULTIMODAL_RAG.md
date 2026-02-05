@@ -2,9 +2,9 @@
 
 > **Course:** CS 5542 — Big Data Analytics and Applications  
 > **Lab:** Multimodal RAG Systems & Retrieval Evaluation     
-> **Student Name:** Tony Nguyen
-> **GitHub Username:** mosomo82
-> **Date:** 01/28/2026
+> **Student Name:** Tina (Quynh) Nguyen
+> **GitHub Username:** tinana2k
+> **Date:** 02/05/2026
 
 ---
 
@@ -41,56 +41,55 @@ COMP_SCI_5542/
 ---
 
 ## 2. Project Dataset
-- **Domain:** Privacy/Credit laws 
-- **# Documents:**	4 pdf files and 10 images (scanned pages, flowchart, tables, figures and screenshots etc.)
-- **Data Source (URL / Description):** [mosomo82 Github Repository](https://github.com/mosomo82/COMP_SCI_5542/tree/main/Week_3/project_data)
-
+- **Domain:** Bank Fraud/Policies 
+- **# Documents:**	5 pdf files and 10 images (scanned pages, flowchart, tables, figures and screenshots etc.)
+- **Data Source (URL / Description):** [[tinana2k Github Repository](https://github.com/tinana2k/Comp-Sci-5542-Tina-Nguyen/tree/main/Week_3/project_data_mm)
 ---
 
 ## 3. Queries + Rubrics
 
 The following table outlines the three test queries used to evaluate the RAG system, along with the keyword-based ground truth rubric used for automated scoring.
 
-### **Query 1: FCRA Dispute Process**
+### **Query 1: Credit Card Fraud Red Flags and Staff Response**
 
-* **ID:** `Q1`
-* **Question:** Explain the step-by-step process for a consumer to dispute inaccurate information on their credit report under the FCRA, and detail the specific obligations a 'furnisher of information' has once they receive a dispute from a Credit Reporting Agency (CRA).
+- **ID:** Q1  
+- **Question:** Based on bank fraud policies and the red-flags checklist, what are the most common red flags associated with credit card fraud, and what immediate actions should bank staff take when these indicators are detected?
 
 | Category | Keywords (Ground Truth) |
-| --- | --- |
-| **Must Have** | `30 days`, `investigate`, `modify,delete or block`, `notification`, `irrelavent` |
-| **Optional** | `Consumer Finance Protection Bureau (CFPB)`, `15 days`, `indentify theft` |
+|---------|--------------------------|
+| **Must Have** | `credit card fraud`, `red flags`, `unusual transactions`, `account monitoring`, `staff escalation`, `fraud investigation` |
+| **Optional** | `identity theft`, `transaction velocity`, `policy guidance`, `risk management`, `fraud statistics` |
 
 ---
 
-### **Query 2: Data Minimization Evolution**
+### **Query 2: Internal Control Weaknesses and Fraud Risk**
 
-* **ID:** `Q2`
-* **Question:** How is the concept of 'data minimization' evolving? Specifically, contrast the traditional 'procedural' standard found in WPA-style laws with the new 'substantive' standard introduced by Maryland.
+- **ID:** Q2  
+- **Question:** Using the Internal Control Red Flags checklist and related bank fraud policy documents, identify two internal control weaknesses that increase the risk of fraud and describe one control or mitigation strategy that can reduce this risk.
 
 | Category | Keywords (Ground Truth) |
-| --- | --- |
-| **Must Have** | `procedural`, `substantive`, `adaquate, relevant and reasonably necessary`, `secondary use`, `stricly necessary`, `reasonably necssary` |
-| **Optional** | `opt-in consent`, `online data privacy act`, `product or service requested` |
+|---------|--------------------------|
+| **Must Have** | `internal control weaknesses`, `lack of segregation of duties`, `insufficient oversight`, `fraud risk`, `mitigation controls` |
+| **Optional** | `policy enforcement`, `monitoring procedures`, `compliance timelines`, `risk management framework` |
 
 ---
 
-### **Query 3: Adolescent Data Protections**
+### **Query 3: Suspicious Activity Reporting (SAR) Thresholds**
 
-* **ID:** `Q3`
-* **Question:** Analyze the 'heightened protections' for adolescent data in recent state privacy laws. Which specific activities (e.g., sale, targeted advertising) now typically require opt-in consent for teenagers, and how do the age thresholds vary between states like Delaware, New Jersey, and Oregon?
+- **ID:** Q3  
+- **Question:** According to bank fraud policy documents and supporting figures, what dollar thresholds or conditions trigger the requirement to file a Suspicious Activity Report (SAR), and why are these thresholds important for fraud detection and regulatory compliance?
 
 | Category | Keywords (Ground Truth) |
-| --- | --- |
-| **Must Have** | `opt-in consent`, `targeted advertising`, `sale of personal data`, `profiling`, `actual knowledge`, `willfully disregards` |
-| **Optional** | `under 18`, `duty of care`, `under 17`, `under 16` |
+|---------|--------------------------|
+| **Must Have** | `Suspicious Activity Report`, `SAR threshold`, `dollar amount`, `fraud detection`, `regulatory compliance` |
+| **Optional** | `transaction monitoring`, `fraud trends`, `risk indicators`, `financial institutions`, `reporting obligations` |
 
 ---
 
 ## 4. Methodology
 
 ### A. Data Ingestion & OCR
-* **Text:** Extracted from PDFs (`doc1.pdf` - `doc4.pdf`) using `PyMuPDF`.
+* **Text:** Extracted from PDFs (`doc1.pdf` - `doc5.pdf`) using `PyMuPDF`.
 * **Images:** 10 figures (charts, maps) processed using **Tesseract OCR**. Captions were combined with OCR text to create searchable "Image Items."
 * **Chunking Strategy:**
     * *Baseline:* Page-based chunking.
@@ -114,7 +113,7 @@ We evaluated five retrieval configurations:
 ## 5. Evaluation Results
 
 ### A. Ingestion Report following Track B
-![ingestion_report](https://github.com/user-attachments/assets/3d571f37-fe5c-4bd0-b513-d7914b187712)
+![ingestion_report](https://github.com/tinana2k/Comp-Sci-5542-Tina-Nguyen/blob/main/Week_3/project_report/ingestion_report.jpg)
 
 ### B. Lightweight Generator
 ![generator_lightweight](https://github.com/user-attachments/assets/0cfd7d85-96ce-4eb0-bd24-93c1f1dc4ffc)
